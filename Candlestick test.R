@@ -1,0 +1,5 @@
+install.packages("quantmod")
+library(quantmod)
+getSymbols("AAPL", src="yahoo")
+chartSeries(AAPL, subset="last 6 months", theme=chartTheme("white"))
+addMACD()
